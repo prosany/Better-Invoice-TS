@@ -1,9 +1,5 @@
-interface EndPoints {
-  base: string;
-}
+const baseURL: string = "https://api.github.com";
+const login: string = baseURL + "/users/login";
 
-const endPoints: EndPoints = {
-  base: "https://api.github.com",
-};
-
-export default endPoints;
+export default baseURL;
+export { login };
