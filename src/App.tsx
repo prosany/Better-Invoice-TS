@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import publicRoutes from "./Routes/Routes";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <React.Fragment>
       <Router>

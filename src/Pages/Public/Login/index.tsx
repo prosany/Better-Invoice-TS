@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const Login: React.FC = () => {
   return (
     <React.Fragment>
       <h1>Login</h1>

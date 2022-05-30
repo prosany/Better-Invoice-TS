@@ -1,13 +1,13 @@
-import Login from "../Pages/Public/Login";
-import Signup from "../Pages/Public/Signup";
-import Account from "../Pages/Private/Account";
-import CreateInvoice from "../Pages/Private/Create-PDF";
-import Notifications from "../Pages/Private/Notification";
+import Login from "~/Pages/Public/Login";
+import Signup from "~/Pages/Public/Signup";
+import Account from "~/Pages/Private/Account";
+import CreateInvoice from "~/Pages/Private/Create-PDF";
+import Notifications from "~/Pages/Private/Notification";
 
 interface IRoute {
   id: number;
   path: string;
-  component: () => JSX.Element;
+  component: React.ComponentType<any> | React.ComponentType | undefined;
 }
 
 const publicRoutes: IRoute[] = [
