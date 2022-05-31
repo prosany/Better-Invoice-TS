@@ -1,20 +1,6 @@
-import { CombinedState, combineReducers, Reducer } from "redux";
+import { combineReducers } from "redux";
 import demoReducer from "./Demo/reducer";
 
-interface IPayload {
-  count: number;
-}
-
-const rootReducers: Reducer<
-  CombinedState<{
-    demoReducer: {
-      count: number;
-    };
-  }>,
-  {
-    type: string;
-    payload: IPayload;
-  }
-> = combineReducers({ demoReducer });
+const rootReducers = combineReducers({ demoReducer });
 
 export default rootReducers;

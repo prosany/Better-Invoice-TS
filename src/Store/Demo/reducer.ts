@@ -1,17 +1,23 @@
 import { DECREMENT, INCREMENT, RESET } from "./actionTypes";
+import storage from "redux-persist/lib/storage";
+import { persistReducer } from "redux-persist";
 
-interface IPayload {
+interface IAction {
+  type: string;
+  payload: {
+    count: number;
+  };
+}
+
+interface IState {
   count: number;
 }
 
-const initialState = {
+const initialState: IState = {
   count: 0,
 };
 
-const demoReducer = (
-  state = initialState,
-  action: { type: string; payload: IPayload }
-) => {
+const demoReducer = (state = initialState, action: IAction) => {
   switch (action.type) {
     case INCREMENT:
       return {
@@ -32,4 +38,10 @@ const demoReducer = (
   }
 };
 
-export default demoReducer;
+const persistentStore = {
+  keyPrefix: "betterInvoice-",
+  key: "demo",
+  storage: storage,
+};
+
+export default persistReducer(persistentStore, demoReducer);
