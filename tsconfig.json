@@ -14,6 +14,7 @@
       "Hooks/*": ["Hooks/*"],
       "Layouts/*": ["Layouts/*"],
       "Store/*": ["Store/*"],
+      "Store/*/*": ["Store/*"],
       "Test/*": ["Test/*"],
       "Type/*": ["Type/*"],
       "./*": ["~/*"]
