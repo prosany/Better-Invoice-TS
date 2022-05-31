@@ -1,14 +1,30 @@
 {
-  "users": [
+  "users": [],
+  "products": [
     {
-      "name": "Mahabub Hasan Sany",
-      "age": "200",
+      "name": "Apple Macbook Pro M1",
+      "price": "3000",
       "id": 1
     },
     {
-      "name": "Meher Afroz Shabrina Sumci",
-      "age": "202",
+      "name": "Apple Macbook Pro M1 Pro",
+      "price": "4000",
       "id": 2
+    },
+    {
+      "name": "HP Notebook 15-Da0005ne",
+      "price": "400",
+      "id": 3
+    },
+    {
+      "name": "Apple Macbook Air M1",
+      "price": "1000",
+      "id": 4
+    },
+    {
+      "name": "Apple Macbook Air M1 Pro",
+      "price": "2000",
+      "id": 5
     }
   ]
 }

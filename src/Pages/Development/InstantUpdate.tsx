@@ -3,17 +3,20 @@ import axios from "axios";
 import useSWR, { useSWRConfig } from "swr";
 
 const axiosLoader = (url: string) => axios.get(url).then((res) => res.data);
-const baseUrl = "http://localhost:8060/users";
+const baseUrl = "http://localhost:8060/products";
 
 const InstantUpdate = () => {
-  const [user, setUser] = React.useState({ name: "", age: 0 });
+  const [user, setUser] = React.useState({ name: "", price: 0 });
   const { mutate } = useSWRConfig();
 
   // Fetch Data and Cache it
-  const { data, error } = useSWR(baseUrl, axiosLoader);
+  const { data, error } = useSWR(baseUrl, axiosLoader, {
+    revalidateOnFocus: false,
+  });
   if (!data) return <div>Loading...</div>;
   if (error) return <div>Error!</div>;
 
+  // Update Data on State Change
   const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
     setUser({ ...user, [e.currentTarget.name]: e.currentTarget.value });
   };
@@ -22,7 +25,7 @@ const InstantUpdate = () => {
   const craeteUser = async () => {
     mutate(baseUrl, [...data, user], false);
     await axios.post(baseUrl, user);
-    setUser({ name: "", age: 0 });
+    setUser({ name: "", price: 0 });
     mutate(baseUrl);
   };
 
@@ -39,9 +42,9 @@ const InstantUpdate = () => {
     <React.Fragment>
       Data: {data.length <= 0 && "No Data"}
       {data?.map(
-        (usr: { name: string; age: string; id: number }, idx: number) => (
+        (usr: { name: string; price: string; id: number }, idx: number) => (
           <div key={idx}>
-            {idx + 1} - Name: {usr?.name} - Age: {usr?.age} -{" "}
+            {idx + 1} - Name: {usr?.name} - Price: {usr?.price} -{" "}
             <span
               style={{ cursor: "pointer" }}
               onClick={() => deleteUser(usr.id)}
@@ -63,13 +66,13 @@ const InstantUpdate = () => {
       <br />
       <input
         type="text"
-        name="age"
+        name="price"
         onChange={handleChange}
-        placeholder="Age"
-        value={user.age || ""}
+        placeholder="Price"
+        value={user.price || ""}
       />
       <br />
-      <button onClick={craeteUser}>Add User</button>
+      <button onClick={craeteUser}>Add Product</button>
     </React.Fragment>
   );
 };

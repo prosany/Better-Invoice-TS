@@ -15,7 +15,7 @@ const publicRoutes: IRoute[] = [
   { id: 0, path: "/", component: Login },
   { id: 1, path: "/login", component: Login },
   { id: 2, path: "/signup", component: Signup },
-  { id: 3, path: "/development/swr", component: InstantUpdate },
+  { id: 3, path: "/development/instant", component: InstantUpdate },
 ];
 
 const privateRoutes: IRoute[] = [
