@@ -3,6 +3,7 @@ import Signup from "Pages/Public/Signup";
 import Account from "Pages/Private/Account";
 import CreateInvoice from "Pages/Private/Create-PDF";
 import Notifications from "Pages/Private/Notification";
+import InstantUpdate from "Pages/Development/InstantUpdate";
 
 interface IRoute {
   id: number;
@@ -14,6 +15,7 @@ const publicRoutes: IRoute[] = [
   { id: 0, path: "/", component: Login },
   { id: 1, path: "/login", component: Login },
   { id: 2, path: "/signup", component: Signup },
+  { id: 3, path: "/development/swr", component: InstantUpdate },
 ];
 
 const privateRoutes: IRoute[] = [

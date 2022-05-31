@@ -10,7 +10,9 @@
     "@types/node": "^17.0.35",
     "@types/react-dom": "^18.0.4",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^0.27.2",
     "boxicons": "^2.1.2",
+    "json-server": "^0.17.0",
     "moment": "^2.29.3",
     "node-sass": "^7.0.1",
     "react": "^18.1.0",
@@ -35,6 +37,7 @@
   },
   "scripts": {
     "start": "set PORT=8050 && react-scripts start",
+    "server": "json-server --port 8060 --watch db.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
