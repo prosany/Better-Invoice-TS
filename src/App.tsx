@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import publicRoutes from "./Routes/Routes";
+import ProtectedRoutes from "Routes/Middlewares";
+import publicRoutes, { privateRoutes } from "./Routes/Routes";
+import Layout from "./Layouts";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +15,17 @@ const App: React.FC = () => {
               path={route.path}
               component={route.component}
               key={index}
+            />
+          ))}
+
+          {privateRoutes.map((route, index) => (
+            <ProtectedRoutes
+              exact
+              path={route.path}
+              component={route.component}
+              key={index}
+              layout={Layout}
+              isPrivate={true}
             />
           ))}
         </Switch>

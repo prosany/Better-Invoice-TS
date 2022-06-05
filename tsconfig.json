@@ -14,9 +14,9 @@
       "Hooks/*": ["Hooks/*"],
       "Layouts/*": ["Layouts/*"],
       "Store/*": ["Store/*"],
-      "Store/*/*": ["Store/*"],
       "Test/*": ["Test/*"],
       "Type/*": ["Type/*"],
+      "Schema/*": ["Schema/*"],
       "./*": ["~/*"]
     },
     "allowJs": true,

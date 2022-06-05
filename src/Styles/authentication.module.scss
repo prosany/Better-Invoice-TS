@@ -1,0 +1,125 @@
+.body {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.main {
+  margin: 0 4%;
+  width: 420px;
+  max-width: 90%;
+  height: max-content;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  //   login header style start here
+  .login_haeders {
+    display: flex;
+    align-items: center;
+    .green_bg {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0faf5244;
+      border-radius: 50%;
+      margin-right: 10px;
+      font-size: 18px;
+      padding: 10px;
+      color: #0faf51;
+    }
+    .heading_text {
+      font-size: 28px;
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+  }
+  //   benefit style start here
+  .benefit {
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #5c5c5c;
+  }
+  .justify_bt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    div {
+      font-size: 15px;
+      font-weight: 500;
+      color: #5c5c5c;
+      cursor: pointer;
+      i {
+        margin-right: 8px;
+      }
+    }
+    a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #0166d6;
+      text-decoration: none;
+    }
+  }
+  .useful_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 0;
+      color: #5c5c5c;
+    }
+    a {
+      color: #0166d6;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
+  .social_login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .google_login {
+      width: 49%;
+      height: 45px;
+      background-color: #323232;
+      border: 1px solid #323232;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      i {
+        margin-right: 8px;
+      }
+    }
+    .facebook_login {
+      width: 49%;
+      height: 45px;
+      background-color: #456cc5;
+      border: 1px solid #456cc5;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+}
