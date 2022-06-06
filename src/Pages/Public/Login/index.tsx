@@ -18,6 +18,7 @@ const Login: React.FC = () => {
   const handleChange = () => {
     setRemember(!remember);
   };
+
   return (
     <React.Fragment>
       <div className={styles.body}>
@@ -100,7 +101,7 @@ const Login: React.FC = () => {
                 </Form>
               )}
             </Formik>
-            <p className="text_center">Or</p>
+            <p className="text_center">OR</p>
             <div className={styles.social_login}>
               <button className={styles.google_login} type="button">
                 <i className="fab fa-google"></i>Google

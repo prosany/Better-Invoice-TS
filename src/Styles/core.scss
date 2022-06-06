@@ -10,6 +10,7 @@ body {
   box-sizing: border-box !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-background) !important;
 }
 
 code {

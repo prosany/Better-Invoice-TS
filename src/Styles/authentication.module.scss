@@ -1,5 +1,7 @@
+@import url("./Theme/theme.scss");
+
 .body {
-  background-color: #f1f1f1;
+  background-color: var(--body-background);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -14,7 +16,7 @@
   max-width: 90%;
   height: max-content;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--auth-box-background);
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   //   login header style start here
@@ -37,7 +39,7 @@
     .heading_text {
       font-size: 28px;
       font-weight: 600;
-      color: #2c2c2c;
+      color: var(--auth-heading-color);
     }
   }
   //   benefit style start here
@@ -45,7 +47,7 @@
     margin: 15px 0;
     font-size: 15px;
     font-weight: 500;
-    color: #5c5c5c;
+    color: var(--auth-benefit-color);
   }
   .justify_bt {
     display: flex;
@@ -55,7 +57,7 @@
     div {
       font-size: 15px;
       font-weight: 500;
-      color: #5c5c5c;
+      color: var(--form-useful-link-color);
       cursor: pointer;
       i {
         margin-right: 8px;
@@ -74,7 +76,7 @@
     align-items: center;
     p {
       margin: 0;
-      color: #5c5c5c;
+      color: var(--form-useful-link-color);
     }
     a {
       color: #0166d6;

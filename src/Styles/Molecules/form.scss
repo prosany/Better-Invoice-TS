@@ -1,3 +1,5 @@
+@import url("../Theme/theme.scss");
+
 .required {
   color: #ff0000;
   margin: 0 2px;
@@ -7,14 +9,14 @@
 .form_label {
   font-size: 15px;
   font-weight: 500;
-  color: #767676;
+  color: var(--form-label-color);
   margin: 0 0 10px;
   display: block;
 }
 
 .form_control {
   display: block;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--form-border);
   border-radius: 6px;
   font-size: 14px;
   color: #000;
@@ -23,7 +25,7 @@
   padding: 0 10px;
   margin: 10px 0;
   box-sizing: border-box;
-  background-color: #fff !important;
+  background-color: var(--body-background) !important;
   outline: none;
   &:focus {
     border: 1px solid #52c381c2;
@@ -37,19 +39,19 @@
 
 .form_error {
   border: 1px solid #ff4848 !important;
-  background-color: #fff !important;
+  background-color: var(--body-background) !important;
   color: #ff4848 !important;
 
   &:focus {
     border: 1px solid #ff4848aa;
     box-shadow: 0px 0px 5px #ff48485f;
-    background-color: #fff !important;
+    background-color: var(--body-background) !important;
     color: #ff4848 !important;
   }
   &::placeholder {
     color: #ff4848 !important;
     font-family: "Nunito", sans-serif;
-    background-color: #fff !important;
+    background-color: var(--body-background) !important;
   }
 }
 
